@@ -1,0 +1,81 @@
+/* Sarasas.css - Fluid modern grid/table for Sarasas component */
+
+.sarasas {
+  width: 100%;
+  overflow-x: auto;
+  margin: 2vw 0;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(60, 72, 88, 0.08);
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.sarasas-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.sarasas-table th, .sarasas-table td {
+  padding: 1rem 1.2rem;
+  text-align: left;
+}
+
+.sarasas-table th {
+  background: #f4f7fb;
+  color: #1e293b;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-bottom: 2px solid #e3e8ee;
+}
+
+.sarasas-table tr {
+  transition: background 0.2s;
+}
+
+.sarasas-table tr:hover {
+  background: #f1f5f9;
+}
+
+.sarasas-table td {
+  border-bottom: 1px solid #e3e8ee;
+  vertical-align: middle;
+}
+
+.sarasas-table img {
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(60, 72, 88, 0.10);
+}
+
+.sarasas-table button {
+  background: linear-gradient(90deg, #38bdf8 0%, #22d3ee 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(34, 211, 238, 0.10);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.sarasas-table button:hover {
+  background: linear-gradient(90deg, #0ea5e9 0%, #06b6d4 100%);
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 800px) {
+  .sarasas-table th, .sarasas-table td {
+    padding: 0.6rem 0.5rem;
+    font-size: 0.98rem;
+  }
+  .sarasas-table img {
+    width: 40px;
+    height: 28px;
+  }
+}
