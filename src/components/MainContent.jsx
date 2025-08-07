@@ -47,6 +47,10 @@ function MainContent() {
     setSarasas(sarasas.filter(i => i !== item));
   }
 
+  const removeNewsItem = (item) => {
+    setNews(news.filter(i => i !== item));
+  }
+
   return (
     <main className="main-content">
       {errors.length > 0 && <div>Error fetching data</div>}
@@ -58,7 +62,7 @@ function MainContent() {
 
       <Sarasas duomenys={sarasas} rodytiFoto={imgRodymas} salinimoEventas={salinimas} />
 
-      <News title="Latest News" newsList={news} handleDelete={salinimaNews} />
+      <News title="Latest News" newsList={news} handleDelete={removeNewsItem} />
 
     </main>
   );

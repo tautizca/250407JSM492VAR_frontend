@@ -1,4 +1,6 @@
+
 import NewsItem from "./NewsItem";
+import './News.css';
 
 const News = ({title, newsList, handleDelete}) => {
   return (
