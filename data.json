@@ -1,0 +1,10 @@
+{
+    "news": [
+        {"title": "pavadinimas", "descripcion": "aprasymas ...adsfasdf", "img": "/img/foto1.jpg"},
+        {"title": "antras", "descripcion": "antras aprasymas ...", "img": "/img/foto2.jpg"},
+        {"title": "trecias", "descripcion": "trecias aprasymas ...", "img": "/img/foto3.jpg"},
+        {"title": "ketvirtas", "descripcion": "ketvirtas aprasymas ...", "img": "/img/foto4.jpg"},
+        {"title": "penktas", "descripcion": "penktas aprasymas ...", "img": "/img/foto5.jpg"},
+        {"title": "sestas", "descripcion": "sestas aprasymas ...", "img": "/img/foto6.jpg"}
+    ]
+}
