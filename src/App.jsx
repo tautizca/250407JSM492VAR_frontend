@@ -2,9 +2,8 @@ import Header from './components/Header';
 import Aside from './components/Aside';
 import MainContent from './pages/MainContent';
 import Footer from './components/Footer';
-import './App.css';
-import { ToastContainer, toast } from 'react-toastify';
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import NotFound from './pages/NotFound';
 import About from './pages/About';
@@ -15,21 +14,20 @@ import Contacts from './pages/Contacts';
 function App() {
   return (
     <Router>
-      <div className="app-layout">
+      <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800">
         <ToastContainer />
         <Header title="MANO SVETAINE">Welcome to my website</Header>
-        <div className="main-area">
+        <div className="flex-1 flex flex-col md:flex-row max-w-7xl w-full mx-auto gap-6 px-4 sm:px-6 lg:px-8 py-6">
           <Aside />
-          <div className="content-area" style={{ padding: '20px', marginLeft: '254px' }}>
-          <Routes>
-            <Route path="/" element={<MainContent />} />
-            <Route path="/news" element={<News />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contacts />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <div className="flex-1">
+            <Routes>
+              <Route path="/" element={<MainContent />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contacts />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
           </div>
-
         </div>
         <Footer />
       </div>

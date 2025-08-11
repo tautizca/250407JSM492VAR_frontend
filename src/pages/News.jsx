@@ -1,4 +1,3 @@
-import './MainContent.css';
 import {useState, useEffect} from 'react';
 import {News as NewsComponent} from '../components/News.jsx';
 import axios from 'axios';

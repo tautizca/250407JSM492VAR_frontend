@@ -1,4 +1,3 @@
-import './MainContent.css';
 import {useState, useEffect} from 'react';
 import Sarasas from '../components/Sarasas.jsx';
 
@@ -33,12 +32,14 @@ function MainContent() {
   }
 
   return (
-    <main className="main-content">
-      <h2>Welcome to the Modern React App: {duomenys}</h2>
-      <p>This is a beautiful, modern, and responsive React page layout using components.</p>
-      <button onClick={manoVeiksmai} className=''>PASPAUSK {imgRodymas.toString()}</button>
-      <button onClick={() => {manoKitiVeiksmai('asda');}}>Kitas BTN</button>
-      <button onClick={() => {setCount(count += 1)}}>{count}</button>
+    <main className="rounded-xl bg-white shadow border border-slate-200 p-6 min-h-[60vh]">
+      <h2 className="text-2xl font-bold mb-2 text-slate-800">Welcome to the Modern React App: {duomenys}</h2>
+      <p className="text-slate-600 mb-4">This is a beautiful, modern, and responsive React page layout using components.</p>
+      <div className="flex flex-wrap gap-3 mb-6">
+        <button onClick={manoVeiksmai} className="px-4 py-2 rounded-lg bg-sky-600 text-white hover:bg-sky-700 transition">PASPAUSK {imgRodymas.toString()}</button>
+        <button onClick={() => {manoKitiVeiksmai('asda');}} className="px-4 py-2 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 transition">Kitas BTN</button>
+        <button onClick={() => {setCount(count += 1)}} className="px-4 py-2 rounded-lg bg-slate-700 text-white hover:bg-slate-800 transition">{count}</button>
+      </div>
 
       <Sarasas duomenys={sarasas} rodytiFoto={imgRodymas} salinimoEventas={salinimas} />
 
