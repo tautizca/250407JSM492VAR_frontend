@@ -18,4 +18,4 @@ const News = ({title, newsList, handleDelete}) => {
   );
 }
 
-export default News;
+export {News};

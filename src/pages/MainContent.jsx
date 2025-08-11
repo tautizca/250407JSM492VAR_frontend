@@ -1,8 +1,6 @@
 import './MainContent.css';
 import {useState, useEffect} from 'react';
-import Sarasas from './Sarasas.jsx';
-import News from './News.jsx';
-import axios from 'axios';
+import Sarasas from '../components/Sarasas.jsx';
 
 function MainContent() {
   const [duomenys, setDuomenys] = useState('testas');
@@ -10,19 +8,6 @@ function MainContent() {
   const [imgRodymas, toggleRodymas] = useState(true);
 
   const [sarasas, setSarasas] = useState([]);
-  const [news, setNews] = useState([]);
-  const [errors, setErrors] = useState([]);
-
-  useEffect(() => {
-    axios.get('http://localhost:3000/news')
-      .then(response => {
-        setSarasas(response.data);
-        setNews(response.data);
-      }).catch(error => {
-        setErrors([...errors, error]);
-      });
-  }, []);
-
 
   useEffect(() => {
     console.log(count);
@@ -47,13 +32,8 @@ function MainContent() {
     setSarasas(sarasas.filter(i => i !== item));
   }
 
-  const removeNewsItem = (item) => {
-    setNews(news.filter(i => i !== item));
-  }
-
   return (
     <main className="main-content">
-      {errors.length > 0 && <div>Error fetching data</div>}
       <h2>Welcome to the Modern React App: {duomenys}</h2>
       <p>This is a beautiful, modern, and responsive React page layout using components.</p>
       <button onClick={manoVeiksmai} className=''>PASPAUSK {imgRodymas.toString()}</button>
@@ -61,8 +41,6 @@ function MainContent() {
       <button onClick={() => {setCount(count += 1)}}>{count}</button>
 
       <Sarasas duomenys={sarasas} rodytiFoto={imgRodymas} salinimoEventas={salinimas} />
-
-      <News title="Latest News" newsList={news} handleDelete={removeNewsItem} />
 
     </main>
   );

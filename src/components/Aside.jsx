@@ -1,9 +1,10 @@
 import './Aside.css';
 
 const navItems = [
-  { label: 'Home', href: '#' },
-  { label: 'About', href: '#' },
-  { label: 'Contact', href: '#' },
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'News', href: '/news' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 function Aside() {
