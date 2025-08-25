@@ -1,3 +1,5 @@
+import React from 'react';
+
 const NewsItem = ({ item }) => {
   return (
     <div className="bg-gradient-to-br from-slate-50 to-slate-200 rounded-xl shadow p-4 border border-slate-200 hover:shadow-lg transition">

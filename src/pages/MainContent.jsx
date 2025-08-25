@@ -1,7 +1,9 @@
 import {useState, useEffect} from 'react';
 import Sarasas from '../components/Sarasas.jsx';
+import { useTheme } from '../context/theme-context.jsx';
 
 function MainContent() {
+  const themeContext = useTheme();
   const [duomenys, setDuomenys] = useState('testas');
   let [count, setCount] = useState(0);
   const [imgRodymas, toggleRodymas] = useState(true);
@@ -32,7 +34,7 @@ function MainContent() {
   }
 
   return (
-    <main className="rounded-xl bg-white shadow border border-slate-200 p-6 min-h-[60vh]">
+    <main className={`rounded-xl bg-white shadow border border-slate-200 p-6 min-h-[60vh] ${themeContext.theme}`}>
       <h2 className="text-2xl font-bold mb-2 text-slate-800">Welcome to the Modern React App: {duomenys}</h2>
       <p className="text-slate-600 mb-4">This is a beautiful, modern, and responsive React page layout using components.</p>
       <div className="flex flex-wrap gap-3 mb-6">
