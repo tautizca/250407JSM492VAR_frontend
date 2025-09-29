@@ -1,7 +1,15 @@
 import React from 'react';
 import NewsItem from "./NewsItem";
 
-const News = ({ title, newsList, handleDelete }) => {
+import type { NewsItem as NewsItemType } from "../services/interfaces/newsItem";
+
+type NewsProps = {
+  title: string;
+  newsList: NewsItemType[];
+  handleDelete: (item: NewsItemType) => void;
+};
+
+const News = ({ title, newsList, handleDelete }: NewsProps) => {
   return (
     <div className="bg-slate-50 border border-slate-200 rounded-2xl shadow p-6 w-full">
       <h2 className="text-2xl font-extrabold text-slate-800 mb-4 text-center">{title}</h2>

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { News as NewsComponent } from '../components/News.jsx';
-import { fetchNews } from '../services/newsService';
+import { fetchNews } from '../services/newApiService.js';
+import { NewsItem } from '../services/interfaces/newsItem';
 
 function News() {
-  const [news, setNews] = useState([]);
+  const [news, setNews] = useState<NewsItem[]>([]);
   const [errors, setErrors] = useState(null);
   const [loading, setLoading] = useState(true);
 

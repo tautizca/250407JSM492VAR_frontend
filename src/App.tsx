@@ -12,6 +12,7 @@ import News from './pages/News';
 import Contacts from './pages/Contacts';
 
 import { ThemeProvider } from './context/theme-context';
+import React from 'react';
 
 function App() {
 
