@@ -1,4 +1,4 @@
-import { NewsItem } from "./interfaces/newsItem";
+import { NewsItem } from "./interfaces/NewsItemInterface";
 
 class NewsService {
     private data: NewsItem[];

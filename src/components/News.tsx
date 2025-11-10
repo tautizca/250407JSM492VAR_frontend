@@ -1,12 +1,11 @@
-import React from 'react';
 import NewsItem from "./NewsItem";
 
-import type { NewsItem as NewsItemType } from "../services/interfaces/newsItem";
+import type { NewsItemInterface } from "../services/interfaces/NewsItemInterface";
 
 type NewsProps = {
   title: string;
-  newsList: NewsItemType[];
-  handleDelete: (item: NewsItemType) => void;
+  newsList: NewsItemInterface[];
+  handleDelete: (item: NewsItemInterface) => void;
 };
 
 const News = ({ title, newsList, handleDelete }: NewsProps) => {

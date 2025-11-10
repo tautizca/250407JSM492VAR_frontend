@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { News as NewsComponent } from '../components/News.jsx';
 import { fetchNews } from '../services/newApiService.js';
-import { NewsItem } from '../services/interfaces/newsItem';
+import { NewsItemInterface } from '../services/interfaces/NewsItemInterface.js';
 
 function News() {
-  const [news, setNews] = useState<NewsItem[]>([]);
+  const [news, setNews] = useState<NewsItemInterface[]>([]);
   const [errors, setErrors] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -26,8 +26,8 @@ function News() {
     };
   }, []);
 
-  const removeNewsItem = (item) => {
-    setNews((prev) => prev.filter((i) => i !== item));
+  const removeNewsItem = (item : NewsItemInterface) => {
+    setNews((prev : NewsItemInterface[]) => prev.filter((i) => i !== item));
   };
 
   if (loading) return <div>Loading...</div>;
