@@ -5,6 +5,7 @@ import NewsItem from "../components/NewsItem";
 export const NewsBeta = () => {
     const [news, setNews] = useState([]);
 
+    // Vienkartinis duomenų užklausimas į serverį; useEffect paleidžiamas tik po pirmo renderio
     useEffect(() => {
         axios.get("http://localhost:80/news")
             .then(response => {
@@ -15,6 +16,7 @@ export const NewsBeta = () => {
     return (
         <>
             <h2>NAUJIENOS Beta:</h2>
+            {/* Toliau kiekvienas naujienų elementas transformuojamas į NewsItem komponentą */}
             {news.map((element, index) => (
                 <NewsItem key={index} item={element} />
             ))}
