@@ -13,6 +13,7 @@ import Contacts from './pages/Contacts';
 
 import { ThemeProvider } from './context/theme-context';
 import React from 'react';
+import { NewsBeta } from './pages/News-beta';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<MainContent />} />
                 <Route path="/news" element={<News />} />
+                <Route path='/news-beta' element={<NewsBeta />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contacts />} />
                 <Route path="*" element={<NotFound />} />
