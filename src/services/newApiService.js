@@ -1,8 +1,10 @@
 import axios from 'axios';
 import NewsService from './NewsService';
 
+const API_PORT = 81;
+
 export async function fetchNews() {
-  const resp = await axios.get('http://localhost:80/news');
+  const resp = await axios.get('http://localhost:'+API_PORT+'/news');
 
   let jsonData = resp.data;
 
